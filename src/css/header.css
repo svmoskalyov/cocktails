@@ -206,7 +206,9 @@ a {
   }
 
   .nav__link:hover,
-  .nav__sublink:hover {
+  .nav__sublink:hover,
+  .nav__link:focus,
+  .nav__sublink:focus {
     color: tomato;
   }
 
@@ -221,7 +223,8 @@ a {
     transition: opacity 0.4s, transform 0.4s ease-in-out;
   }
 
-  .nav__item:hover .nav__sublist {
+  .nav__item:hover .nav__sublist,
+  .nav__item:focus .nav__sublist {
     /* display: block; */
     transform: none;
     opacity: 1;
@@ -264,7 +267,9 @@ a {
   }
 
   .nav__link:hover .nav__link-line::after,
-  .nav__link:hover .nav__link-line::before {
+  .nav__link:hover .nav__link-line::before,
+  .nav__link:focus .nav__link-line::after,
+  .nav__link:focus .nav__link-line::before {
     background-color: tomato;
   }
 }
