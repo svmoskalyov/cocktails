@@ -1,7 +1,27 @@
 <header class="header">
   <div class="container header__container">
     <a class="logo" href="#"></a>
+
+    <button class="burger" data-burger aria-label="menu" aria-expanded="false">
+      <span class="burger__line"></span>
+    </button>
+
     <nav class="nav" data-nav>
+      <form class="search-form">
+        <div class="search-form__field">
+          <input
+            class="search-form__input"
+            type="text"
+            name="searchQuery"
+            autocomplete="off"
+            placeholder="Search..."
+          />
+          <button class="search-form__btn" type="submit">
+            <svg class="search-form__icon"></svg>
+          </button>
+        </div>
+      </form>
+
       <ul class="nav__list">
         <li class="nav__item">
           <a class="nav__link" href="#">Home</a>
@@ -21,24 +41,5 @@
         </li>
       </ul>
     </nav>
-
-    <form class="search-form">
-      <div class="search-form__field">
-        <input
-          class="search-form__input"
-          type="text"
-          name="searchQuery"
-          autocomplete="off"
-          placeholder="Search..."
-        />
-        <button class="search-form__btn" type="submit">
-          <svg class="search-form__icon"></svg>
-        </button>
-      </div>
-    </form>
-
-    <button class="burger" data-burger aria-label="menu" aria-expanded="false">
-      <span class="burger__line"></span>
-    </button>
   </div>
 </header>
