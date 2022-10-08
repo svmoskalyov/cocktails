@@ -240,7 +240,7 @@ a {
   }
 
   .nav__item:hover .nav__sublist,
-  .nav__item:focus .nav__sublist {
+  .nav__item:focus-within .nav__sublist {
     /* display: block; */
     transform: none;
     opacity: 1;
