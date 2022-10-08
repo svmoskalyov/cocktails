@@ -1,0 +1,44 @@
+<header class="header">
+  <div class="container header__container">
+    <a class="logo" href="#"></a>
+    <nav class="nav" data-nav>
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a class="nav__link" href="#">Home</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#"
+            >Favorite<span class="nav__link-line"></span
+          ></a>
+          <ul class="nav__sublist">
+            <li class="nav__subitem">
+              <a class="nav__sublink" href="#">Favorite cocktails</a>
+            </li>
+            <li class="nav__subitem">
+              <a class="nav__sublink" href="#">Favorite ingredients</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <form class="search-form">
+      <div class="search-form__field">
+        <input
+          class="search-form__input"
+          type="text"
+          name="searchQuery"
+          autocomplete="off"
+          placeholder="Search |"
+        />
+        <button class="search-form__btn" type="submit">
+          <svg class="search-form__icon"></svg>
+        </button>
+      </div>
+    </form>
+
+    <button class="burger" data-burger aria-label="menu" aria-expanded="false">
+      <span class="burger__line"></span>
+    </button>
+  </div>
+</header>
