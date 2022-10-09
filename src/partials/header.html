@@ -1,9 +1,9 @@
 <header class="header">
   <div class="container header__container">
-    <a class="logo" href="#" alt="logo company"></a>
+    <a class="logo visible" href="#" alt="logo company"></a>
 
     <div class="header__box" data-box>
-      <form class="search-form">
+      <form class="search-form visible">
         <div class="search-form__field">
           <input
             class="search-form__input"
@@ -45,30 +45,26 @@
       </nav>
     </div>
 
-    <!-- <div class="toolbar"> -->
-      <div class="theme-switch">
-        <span class="theme-switch__label theme-switch-light">Light</span>
-
-        <div class="theme-switch__control">
-          <input
-            class="theme-switch__toggle"
-            type="checkbox"
-            name="theme"
-            id="theme-switch-toggle"
-            aria-label="switch between dark and light theme"
-          />
-          <label
-            aria-hidden="true"
-            class="theme-switch__track"
-            for="theme-switch-toggle"
-          >
-          </label>
-          <div aria-hidden="true" class="theme-switch__marker"></div>
-        </div>
-
-        <span class="theme-switch__label theme-switch-dark">Dark</span>
+    <div class="theme-switch" data-switch>
+      <span class="theme-switch__label theme-switch-light">Light</span>
+      <div class="theme-switch__control">
+        <input
+          class="theme-switch__toggle"
+          type="checkbox"
+          name="theme"
+          id="theme-switch-toggle"
+          aria-label="switch between dark and light theme"
+        />
+        <label
+          aria-hidden="true"
+          class="theme-switch__track"
+          for="theme-switch-toggle"
+        >
+        </label>
+        <div aria-hidden="true" class="theme-switch__marker"></div>
       </div>
-    <!-- </div> -->
+      <span class="theme-switch__label theme-switch-dark">Dark</span>
+    </div>
 
     <button
       class="burger"
