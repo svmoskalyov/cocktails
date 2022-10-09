@@ -1,6 +1,6 @@
 <header class="header">
   <div class="container header__container">
-    <a class="logo" href="#"></a>
+    <a class="logo" href="#" alt="logo company"></a>
 
     <div class="header__box" data-box>
       <form class="search-form">
@@ -11,14 +11,19 @@
             name="searchQuery"
             autocomplete="off"
             placeholder="Search..."
+            aria-label="search input field"
           />
-          <button class="search-form__btn" type="submit">
-            <svg class="search-form__icon"></svg>
+          <button
+            class="search-form__btn"
+            type="submit"
+            aria-label="search button"
+          >
+            <svg class="search-form__icon" width="24" height="24"></svg>
           </button>
         </div>
       </form>
 
-      <nav class="nav" data-nav>
+      <nav class="nav" aria-label="navigation menu" data-nav>
         <ul class="nav__list">
           <li class="nav__item">
             <a class="nav__link" href="#">Home</a>
@@ -40,7 +45,12 @@
       </nav>
     </div>
 
-    <button class="burger" data-burger aria-label="menu" aria-expanded="false">
+    <button
+      class="burger"
+      data-burger
+      aria-label="menu button"
+      aria-expanded="false"
+    >
       <span class="burger__line"></span>
     </button>
   </div>
