@@ -45,6 +45,31 @@
       </nav>
     </div>
 
+    <div class="toolbar">
+      <div class="theme-switch">
+        <span class="theme-switch__label">Light</span>
+
+        <div class="theme-switch__control">
+          <input
+            class="theme-switch__toggle"
+            type="checkbox"
+            name="theme"
+            id="theme-switch-toggle"
+            aria-label="switch between dark and light theme"
+          />
+          <label
+            aria-hidden="true"
+            class="theme-switch__track"
+            for="theme-switch-toggle"
+          >
+          </label>
+          <div aria-hidden="true" class="theme-switch__marker"></div>
+        </div>
+
+        <span class="theme-switch__label">Dark</span>
+      </div>
+    </div>
+
     <button
       class="burger"
       data-burger
