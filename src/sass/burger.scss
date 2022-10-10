@@ -11,55 +11,105 @@
   @media screen and (max-width: 1023px) {
     display: block;
   }
+
+  &__line {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 2px;
+    border-radius: 1px;
+    background-color: #000;
+    transform: translateY(-50%);
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    border-radius: 1px;
+    background-color: #000;
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out,
+      bottom 0.3s ease-in-out;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
 }
 
-.burger__line {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 100%;
-  height: 2px;
-  border-radius: 1px;
-  background-color: #000;
-  transform: translateY(-50%);
-  transition: opacity 0.3s ease-in-out;
+// .burger__line {
+//   position: absolute;
+//   left: 0;
+//   top: 50%;
+//   width: 100%;
+//   height: 2px;
+//   border-radius: 1px;
+//   background-color: #000;
+//   transform: translateY(-50%);
+//   transition: opacity 0.3s ease-in-out;
+// }
+
+// .burger::before,
+// .burger::after {
+//   content: '';
+//   position: absolute;
+//   left: 0;
+//   width: 100%;
+//   height: 2px;
+//   border-radius: 1px;
+//   background-color: #000;
+//   transition: transform 0.3s ease-in-out, top 0.3s ease-in-out,
+//     bottom 0.3s ease-in-out;
+// }
+
+// .burger::before {
+//   top: 0;
+// }
+
+// .burger::after {
+//   bottom: 0;
+// }
+
+.burger-active {
+  & .burger__line {
+    opacity: 0;
+  }
+
+  &::before {
+    top: 50%;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    bottom: auto;
+    top: 50%;
+    transform: rotate(-45deg);
+  }
 }
 
-.burger::before,
-.burger::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  border-radius: 1px;
-  background-color: #000;
-  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out,
-    bottom 0.3s ease-in-out;
-}
+// .burger-active .burger__line {
+//   opacity: 0;
+// }
 
-.burger::before {
-  top: 0;
-}
+// .burger-active::before {
+//   top: 50%;
+//   transform: rotate(45deg);
+// }
 
-.burger::after {
-  bottom: 0;
-}
-
-.burger-active .burger__line {
-  opacity: 0;
-}
-
-.burger-active::before {
-  top: 50%;
-  transform: rotate(45deg);
-}
-
-.burger-active::after {
-  bottom: auto;
-  top: 50%;
-  transform: rotate(-45deg);
-}
+// .burger-active::after {
+//   bottom: auto;
+//   top: 50%;
+//   transform: rotate(-45deg);
+// }
 
 .stop-scroll {
   overflow: hidden;
