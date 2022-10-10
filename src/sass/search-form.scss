@@ -12,48 +12,92 @@
   @media screen and (min-width: 1024px) {
     margin-right: 20px;
   }
+
+  &__input {
+    padding: 0 10px 0 50px;
+    width: 280px;
+    height: 40px;
+    background-color: inherit;
+    border: 1px solid #fd5103;
+    border-radius: 4px;
+
+    body.dark-theme & {
+      color: #fff;
+    }
+  }
+
+  &__input::placeholder {
+    color: #5f6775;
+    opacity: 0.4;
+  }
+
+  &__field {
+    position: relative;
+  }
+
+  &__btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border: 1px solid #fd5103;
+    border-radius: 4px 0 0 4px;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  &__icon {
+    background-image: url('../images/search.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 
-.search-form__input {
-  padding: 0 10px 0 50px;
-  width: 280px;
-  height: 40px;
-  background-color: inherit;
-  border: 1px solid #fd5103;
-  border-radius: 4px;
-}
+// .search-form__input {
+//   padding: 0 10px 0 50px;
+//   width: 280px;
+//   height: 40px;
+//   background-color: inherit;
+//   border: 1px solid #fd5103;
+//   border-radius: 4px;
+// }
 
-body.dark-theme .search-form__input {
-  color: #fff;
-}
+// body.dark-theme .search-form__input {
+//   color: #fff;
+// }
 
-.search-form__input::placeholder {
-  color: #5f6775;
-  opacity: 0.4;
-}
+// .search-form__input::placeholder {
+//   color: #5f6775;
+//   opacity: 0.4;
+// }
 
-.search-form__field {
-  position: relative;
-}
+// .search-form__field {
+//   position: relative;
+// }
 
-.search-form__btn {
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: 0;
-  padding: 0;
-  width: 40px;
-  height: 40px;
-  border: none;
-  border: 1px solid #fd5103;
-  border-radius: 4px 0 0 4px;
-  background-color: transparent;
-  cursor: pointer;
-}
+// .search-form__btn {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   margin: 0;
+//   padding: 0;
+//   width: 40px;
+//   height: 40px;
+//   border: none;
+//   border: 1px solid #fd5103;
+//   border-radius: 4px 0 0 4px;
+//   background-color: transparent;
+//   cursor: pointer;
+// }
 
-.search-form__icon {
-  background-image: url('../images/search.svg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+// .search-form__icon {
+//   background-image: url('../images/search.svg');
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+// }
