@@ -1,19 +1,93 @@
-h1,
-h2,
-h3,
-p {
-  margin: 0;
-  padding: 0;
+// h1,
+// h2,
+// h3,
+// p {
+//   margin: 0;
+//   padding: 0;
+// }
+
+// ul,
+// ol {
+//   list-style: none;
+//   margin: 0;
+//   padding: 0;
+// }
+
+// a {
+//   text-decoration: none;
+//   color: currentColor;
+// }
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
 }
 
 ul,
 ol {
-  list-style: none;
-  margin: 0;
   padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+textarea {
+  border: none;
+}
+
+input,
+button,
+textarea,
+select,
+cite {
+  font: inherit;
 }
 
 a {
   text-decoration: none;
-  color: currentColor;
+  color: inherit;
+  outline: transparent;
+}
+
+button {
+  cursor: pointer;
+  color: inherit;
+  background-color: transparent;
+  padding: 0;
+  border: none;
 }
