@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&family=Roboto:wght@400;700;900&display=swap');
+
+$text-font: (
+  'primary': 'Poppins',
+  sans-serif,
+  'secondory': 'Roboto',
+  sans-serif,
+);
+
+$text-wght: (
+  'black': 900,
+  'bold': 700,
+  'regular': 400,
+);
+
+$text-size: (
+  'extrabig': 90px,
+  'larg': 48px,
+  'great': 40px,
+  'goodly': 28px,
+  'big': 24px,
+  'babig': 20px,
+  'norm': 18px,
+  'med': 16px,
+  'smal': 14px,
+);
+
+$text-line-height: (
+  'one': 1.6,
+  'two': 1.3,
+);
