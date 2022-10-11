@@ -1,18 +1,26 @@
 .logo {
-  width: 125px;
-  height: 35px;
   background-image: url('../images/logo.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('../images/logo@2x.png');
+  }
+
   @media screen and (max-width: 767px) {
+    width: 125px;
+    height: 35px;
     opacity: 0;
     transform: translateY(-100%);
     transition: opacity 0.4s, transform 0.4s ease-in-out;
   }
 
   @media (min-width: 768px) and (max-width: 1023px) {
+    width: 156px;
+    height: 43px;
     margin-right: 190px;
   }
 
