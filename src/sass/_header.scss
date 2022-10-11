@@ -28,6 +28,7 @@
   }
 
   @media screen and (min-width: 1024px) {
+    overflow: visible;
     height: 60px;
   }
 
@@ -44,6 +45,14 @@
   }
 
   &__box {
+    body.light-theme & {
+      background: #fff;
+    }
+
+    body.dark-theme & {
+      background: #202025;
+    }
+
     @media screen and (max-width: 767px) {
       position: fixed;
       right: 0;

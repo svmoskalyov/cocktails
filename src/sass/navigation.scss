@@ -1,5 +1,13 @@
 .nav {
   @media (min-width: 768px) and (max-width: 1023px) {
+    body.light-theme & {
+      background: #fff;
+    }
+
+    body.dark-theme & {
+      background: #202025;
+    }
+
     display: flex;
     justify-content: center;
     position: fixed;
@@ -41,12 +49,12 @@
 
     @media screen and (max-width: 1023px) {
       width: 210px;
-      height: 99px;
+      height: 96px;
     }
 
     @media screen and (min-width: 1024px) {
       width: 210px;
-      height: 86px;
+      height: 84px;
       transform: none;
       opacity: 1;
     }
@@ -77,10 +85,11 @@
     position: absolute;
     top: 100%;
     left: 0;
-    width: 1;
-    height: 1;
+    width: 1px;
+    height: 1px;
     opacity: 0;
     overflow: hidden;
+    border-radius: 4px;
     transform: translateY(-10%);
     transition: opacity 0.4s, transform 0.4s ease-in-out;
   }
@@ -92,17 +101,18 @@
     width: 1px;
     height: 1px;
     overflow: hidden;
+    border-radius: 4px;
     opacity: 0;
     transform: translateY(-10%);
     transition: opacity 0.4s, transform 0.4s ease-in-out;
   }
 
   body.light-theme & {
-    border: 1px solid #fd5103;
+    outline: 1px solid #fd5103;
   }
 
   body.dark-theme & {
-    border: 1px solid #fff;
+    outline: 1px solid #fff;
   }
 }
 
