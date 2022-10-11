@@ -7,6 +7,12 @@ const searchForm = document.querySelector('.search-form');
 const body = document.body;
 const navItems = nav.querySelectorAll('a');
 
+const { height: pageHeaderHeight } = document
+  .querySelector('.page-header')
+  .getBoundingClientRect();
+
+document.body.style.paddingTop = `${pageHeaderHeight}px`;
+
 burger?.addEventListener('click', () => {
   body.classList.toggle('stop-scroll');
   burger.classList.toggle('burger-active');
