@@ -1,0 +1,51 @@
+@mixin breakpoint($breakpoint, $direction) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+    @if $direction == max {
+      @media (max-width: ($breakpoint-value - 1)) {
+        @content;
+      }
+    } @else if $direction == min {
+      @media (min-width: $breakpoint-value) {
+        @content;
+      }
+    }
+  }
+}
+
+
+// example
+  // @include breakpoint(tablet, min) {
+  //      @include breakpoint(laptop, max) {
+  //           height: 65px;
+  //       }
+  // }
+
+  // @media (min-width: 768px) and (max-width: 1023px) {
+  //   height: 65px;
+  // }
+
+  // @include breakpoint(laptop, min) {
+  //  overflow: visible;
+  //   height: 60px;
+  // }
+
+  // @media screen and (min-width: 1024px) {
+  //   overflow: visible;
+  //   height: 60px;
+  // }
+
+
+    @include breakpoint(max, tablet) {
+
+    }
+
+  @include breakpoint(min, tablet) {
+    @include breakpoint(max, laptop) {
+
+    }
+  }
+
+  @include breakpoint(min, laptop) {
+
+  }
