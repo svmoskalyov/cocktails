@@ -13,7 +13,7 @@ const { height: pageHeaderHeight } = document
 
 document.body.style.paddingTop = `${pageHeaderHeight}px`;
 
-burger?.addEventListener('click', () => {
+burger.addEventListener('click', () => {
   body.classList.toggle('stop-scroll');
   burger.classList.toggle('burger-active');
   box.classList.toggle('visible');
