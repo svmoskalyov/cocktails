@@ -3,7 +3,7 @@
     margin-bottom: 25px;
   }
 
-  @media (min-width: 768px) and (max-width: 1023px) {
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
     opacity: 0;
     transform: translateY(-100%);
     transition: opacity 0.4s, transform 0.4s ease-in-out;
