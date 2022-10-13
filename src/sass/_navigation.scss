@@ -42,7 +42,7 @@
     }
   }
 
-  &__item:hover &__sublist,
+  // &__item:hover &__sublist,
   &__item:focus-within &__sublist {
     transition: opacity 0.4s, transform 0.4s ease-in-out;
     transform: none;

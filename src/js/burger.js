@@ -18,7 +18,14 @@ burger.addEventListener('click', () => {
 });
 
 navItems.forEach(el => {
+// console.log(el.innerText);
   el.addEventListener('click', () => {
+    // console.log(el.innerText);
+    if (el.innerText === 'Favorite') {
+      // console.log('find favorite');
+      return;
+    }
+
     body.classList.remove('stop-scroll');
     burger.classList.remove('burger-active');
     box.classList.remove('visible');
