@@ -1,4 +1,4 @@
-@mixin breakpoint($breakpoint, $direction) {
+@mixin breakpoint($direction, $breakpoint) {
   @if map-has-key($breakpoints, $breakpoint) {
     $breakpoint-value: map-get($breakpoints, $breakpoint);
     @if $direction == max {
@@ -13,39 +13,20 @@
   }
 }
 
+@mixin position($type: relative) {
+  position: $type;
+  top: 0;
+  left: 0;
+}
 
-// example
-  // @include breakpoint(tablet, min) {
-  //      @include breakpoint(laptop, max) {
-  //           height: 65px;
-  //       }
-  // }
+@mixin photo($photo) {
+  background-image: url($photo);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 
-  // @media (min-width: 768px) and (max-width: 1023px) {
-  //   height: 65px;
-  // }
-
-  // @include breakpoint(laptop, min) {
-  //  overflow: visible;
-  //   height: 60px;
-  // }
-
-  // @media screen and (min-width: 1024px) {
-  //   overflow: visible;
-  //   height: 60px;
-  // }
-
-
-    @include breakpoint(max, tablet) {
-
-    }
-
-  @include breakpoint(min, tablet) {
-    @include breakpoint(max, laptop) {
-
-    }
-  }
-
-  @include breakpoint(min, laptop) {
-
-  }
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
