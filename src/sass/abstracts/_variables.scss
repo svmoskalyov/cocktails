@@ -30,8 +30,24 @@ $text-line-height: (
   'two': 1.3,
 );
 
+// Nope
 $breakpoints: (
   tablet: 768px,
   laptop: 1280px,
 );
+
+// Yep
+$breakpoints: (
+  'medium': (min-width: 800px),
+  'large': (min-width: 1000px),
+  'huge': (min-width: 1200px),
+);
+
+$z-indexes: (
+  'modal': 5000,
+  'dropdown': 4000,
+  'default': 1,
+  'below': -1,
+);
+
 
