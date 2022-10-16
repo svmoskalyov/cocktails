@@ -24,4 +24,3 @@ export const remove = key => {
   }
 };
 
-// export default { save, load };
