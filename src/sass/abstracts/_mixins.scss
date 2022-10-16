@@ -55,3 +55,26 @@
   -moz-transform: $value;
   transform: $value;
 }
+
+@mixin mixHiden($value: false) {
+  @if $value == hiden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  } @else if $value == appear {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: initial;
+  }
+}
+
+@mixin button-theme($color, $color-text-hover: $color-light) {
+    color: $color;
+    border-color: $color;
+    background-color: transparent;
+
+    &:hover {
+        color: $color-text-hover;
+        background-color: $color;
+    }
+}
