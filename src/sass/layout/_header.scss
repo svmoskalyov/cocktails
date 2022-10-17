@@ -8,8 +8,8 @@
 
 .page-header {
   position: fixed;
-  top: 0;
-  left: 0;
+  // top: 0;
+  // left: 0;
   z-index: 200;
   width: 100%;
   overflow: hidden;
@@ -41,13 +41,13 @@
   }
 
   &__box {
-    body.light-theme & {
-      background: #fff;
-    }
+    // body.light-theme & {
+    //   background: #fff;
+    // }
 
-    body.dark-theme & {
-      background: #202025;
-    }
+    // body.dark-theme & {
+    //   background: #202025;
+    // }
 
     @media screen and (max-width: 767px) {
       position: fixed;
