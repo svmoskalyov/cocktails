@@ -32,12 +32,6 @@
   }
 }
 
-@mixin position($type: relative) {
-  position: $type;
-  top: 0;
-  left: 0;
-}
-
 @mixin photo($photo) {
   background-image: url($photo);
   background-repeat: no-repeat;
@@ -50,13 +44,7 @@
   height: $height;
 }
 
-@mixin transform($value) {
-  -webkit-transform: $value;
-  -moz-transform: $value;
-  transform: $value;
-}
-
-@mixin mixHiden($value: false) {
+@mixin hiden($value: false) {
   @if $value == hiden {
     opacity: 0;
     visibility: hidden;
@@ -68,13 +56,20 @@
   }
 }
 
-@mixin button-theme($color, $color-text-hover: $color-light) {
-    color: $color;
-    border-color: $color;
-    background-color: transparent;
+@mixin position($type: relative, $top: unset, $left: unset) {
+  position: $type;
+  top: $top;
+  left: $left;
+}
 
-    &:hover {
-        color: $color-text-hover;
-        background-color: $color;
-    }
+@mixin button-theme($color, $color-text-hover: $color-light) {
+  color: $color;
+  border-color: $color;
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    color: $color-text-hover;
+    background-color: $color;
+  }
 }
