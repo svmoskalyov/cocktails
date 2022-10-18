@@ -21,9 +21,10 @@ burger.addEventListener('click', () => {
 navItems.forEach(el => {
   // console.log(el.innerText);
   el.addEventListener('click', () => {
-    el.preventDefault();
+    // el.preventDefault();
     // console.log(el.innerText);
-    if (el.innerText === 'Favorite') {
+    // console.log(window.innerWidth);
+    if (window.innerWidth < 1024 && el.innerText === 'Favorite') {
       // console.log('find favorite');
       return;
     }
