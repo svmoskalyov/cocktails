@@ -26,7 +26,3 @@
 @function fnColor($key) {
   @return map-get($colors, $key);
 }
-
-@function fnTheme($key) {
-  @return map-get($switch-themes, $key);
-}
