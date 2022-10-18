@@ -1,4 +1,4 @@
-@function z($layer) {
+@function fnZ($layer) {
   @if not map-has-key($z-indexes, $layer) {
     @error 'There is no layer named `#{$layer}` in $z-indexes. '
          + 'Layer should be one of #{map-keys($z-indexes)}.';
@@ -7,3 +7,26 @@
   @return map-get($z-indexes, $layer);
 }
 
+@function fnTextFont($key) {
+  @return map-get($text-fonts, $key);
+}
+
+@function fnTextWeight($key) {
+  @return map-get($text-weights, $key);
+}
+
+@function fnTextSize($key) {
+  @return map-get($text-sizes, $key);
+}
+
+@function fnTextLineHeight($key) {
+  @return map-get($text-line-heights, $key);
+}
+
+@function fnColor($key) {
+  @return map-get($colors, $key);
+}
+
+@function fnTheme($key) {
+  @return map-get($switch-themes, $key);
+}
