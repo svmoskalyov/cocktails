@@ -44,8 +44,13 @@
 }
 
 @mixin theme($theme) {
-  background-color: fnTheme($theme);
-  color: fnTheme($theme);
+  @if $theme == light {
+    color: fnColor(text-black);
+    background-color: fnColor(bg-body);
+  } @else if $theme == dark {
+    color: fnColor(bg-body);
+    background-color: fnColor(text-black);
+  }
 }
 
 @mixin photo($photo) {
