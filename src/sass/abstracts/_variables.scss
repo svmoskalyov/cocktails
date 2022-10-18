@@ -2,9 +2,7 @@
 
 $text-fonts: (
   'primary': 'Poppins',
-  sans-serif,
   'secondory': 'Roboto',
-  sans-serif,
 );
 
 $text-weights: (
@@ -58,15 +56,4 @@ $z-indexes: (
   'dropdown': 4000,
   'default': 1,
   'below': -1,
-);
-
-$switch-themes: (
-  'ligth': (
-    background-color: fnColor(bg-body),
-    color: fnColor(text-black),
-  ),
-  'dark': (
-    background-color: fnColor(text-black),
-    color: fnColor(bg-body),
-  ),
 );
