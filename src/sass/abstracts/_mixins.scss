@@ -32,6 +32,22 @@
   }
 }
 
+@mixin typography(
+  $weight: fnTextWeight(regular),
+  $size: fnTextSize(norm),
+  $height: fnTextLineHeight(babig)
+) {
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+  font-style: normal;
+}
+
+@mixin theme($theme) {
+  background-color: fnTheme($theme);
+  color: fnTheme($theme);
+}
+
 @mixin photo($photo) {
   background-image: url($photo);
   background-repeat: no-repeat;
@@ -44,6 +60,24 @@
   height: $height;
 }
 
+@mixin flex($type: flex) {
+  display: $type;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin transition($props...) {
+  $result: ();
+  @each $prop in $props {
+    $result: append(
+      $result,
+      ($prop 250ms cubic-bezier(0.4, 0, 0.2, 1)),
+      $separator: comma
+    );
+  }
+  transition: $result;
+}
+
 @mixin hiden($value: false) {
   @if $value == hiden {
     opacity: 0;
@@ -54,12 +88,6 @@
     visibility: visible;
     pointer-events: initial;
   }
-}
-
-@mixin position($type: relative, $top: unset, $left: unset) {
-  position: $type;
-  top: $top;
-  left: $left;
 }
 
 @mixin button-theme($color, $color-text-hover: $color-light) {
