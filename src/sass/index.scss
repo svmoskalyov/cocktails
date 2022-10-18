@@ -1,4 +1,24 @@
-// @import './common';
-// @import './example';
-// @import './header';
-// // @import './container';
+@import 'abstracts/variables';
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+
+@import 'vendors/normalize';
+
+@import 'base/reset';
+@import 'base/helpers';
+@import 'base/base';
+@import 'base/typography';
+
+@import 'components/burger';
+@import 'components/buttons';
+@import 'components/logo';
+@import 'components/navigation';
+@import 'components/search-form';
+@import 'components/theme-switch';
+
+@import 'layout/header';
+@import 'layout/hero';
+@import 'layout/gallery';
+@import 'layout/sorry-card';
+@import 'layout/modal';
+@import 'layout/footer';
