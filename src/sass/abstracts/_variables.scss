@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&family=Roboto:wght@400;700;900&display=swap');
 
-$text-font: (
+$text-fonts: (
   'primary': 'Poppins',
   sans-serif,
   'secondory': 'Roboto',
   sans-serif,
 );
 
-$text-wght: (
+$text-weights: (
   'black': 900,
   'bold': 700,
   'semibold': 600,
@@ -15,7 +15,7 @@ $text-wght: (
   'regular': 400,
 );
 
-$text-size: (
+$text-sizes: (
   'extrabig': 52px,
   'larg': 48px,
   'great': 32px,
@@ -27,7 +27,7 @@ $text-size: (
   'smal': 14px,
 );
 
-$text-line-height: (
+$text-line-heights: (
   'extrabig': 2,
   'larg': 1.91,
   'great': 1.62,
@@ -40,7 +40,7 @@ $text-line-height: (
 );
 
 $colors: (
-  'body': #fcfcfc,
+  'bg-body': #fcfcfc,
   'primary': #fd5103,
   'secondory': #fe7031,
   'text-black': #202025,
@@ -49,8 +49,8 @@ $colors: (
 );
 
 $breakpoints: (
-  tablet: 768px,
-  laptop: 1280px,
+  'tablet': 768px,
+  'laptop': 1280px,
 );
 
 $z-indexes: (
@@ -58,4 +58,15 @@ $z-indexes: (
   'dropdown': 4000,
   'default': 1,
   'below': -1,
+);
+
+$switch-themes: (
+  'ligth': (
+    background-color: fnColor(bg-body),
+    color: fnColor(text-black),
+  ),
+  'dark': (
+    background-color: fnColor(text-black),
+    color: fnColor(bg-body),
+  ),
 );
