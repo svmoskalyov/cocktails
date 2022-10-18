@@ -1,10 +1,10 @@
 body {
   &.light-theme {
-    @include theme('ligth');
+    @include theme(light);
   }
 
   &.dark-theme {
-    @include theme('dark');
+    @include theme(dark);
   }
 }
 
