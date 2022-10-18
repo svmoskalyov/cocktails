@@ -1,11 +1,11 @@
-body.light-theme {
-  background-color: #fff;
-  color: #202025;
-}
+body {
+  &.light-theme {
+    @include theme('ligth');
+  }
 
-body.dark-theme {
-  background-color: #202025;
-  color: #fff;
+  &.dark-theme {
+    @include theme('dark');
+  }
 }
 
 .container {
@@ -20,9 +20,4 @@ body.dark-theme {
   @media screen and (min-width: 1024px) {
     padding: 0 15px;
   }
-}
-
-body {
-  font-family: 'Poppins', sans-serif;
-  letter-spacing: 0.02em;
 }
