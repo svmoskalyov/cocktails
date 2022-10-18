@@ -1,0 +1,7 @@
+body {
+  @include typography();
+  font-family: fnTextFont(primary);
+  color: fnColor(bg-body);
+  background-color: fnColor(text-black);
+  letter-spacing: 0.02em;
+}
