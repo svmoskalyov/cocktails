@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cocktails</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./images/favicon-16x16.png"
+    />
+    <link rel="stylesheet" href="./sass/index.scss" />
+  </head>
+
+  <body class="fav-ing">
+    <include src="./partials/header.html"></include>
+    <main>
+      <section class="container fav-ing">
+        <div>
+          <h2 class="f-ing_title">Favorite ingredients</h2>
+        </div>
+        <ul class="f-ing_blocks"></ul>
+      </section>
+    </main>
+    <include src="./partials/modal-coctails.html"></include>
+    <include src="./partials/footer.html"></include>
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>
