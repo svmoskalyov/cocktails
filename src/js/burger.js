@@ -4,11 +4,13 @@ const nav = document.querySelector('[data-nav]');
 const themeSwitch = document.querySelector('[data-switch]');
 const logo = document.querySelector('.logo');
 const searchForm = document.querySelector('.search-form');
-const body = document.body;
 const navItems = nav.querySelectorAll('a');
 const form = document.querySelector('.search-form');
+const body = document.body;
 
-burger.addEventListener('click', () => {
+burger.addEventListener('click', onBurger);
+
+function onBurger() {
   body.classList.toggle('stop-scroll');
   burger.classList.toggle('burger-active');
   box.classList.toggle('visible');
@@ -16,28 +18,21 @@ burger.addEventListener('click', () => {
   themeSwitch.classList.toggle('visible');
   logo.classList.toggle('visible');
   searchForm.classList.toggle('visible');
-});
 
-navItems.forEach(el => {
-  // console.log(el.innerText);
-  el.addEventListener('click', () => {
-    // el.preventDefault();
-    // console.log(el.innerText);
-    // console.log(window.innerWidth);
-    if (window.innerWidth < 1024 && el.innerText === 'Favorite') {
-      // console.log('find favorite');
-      return;
-    }
+  document.addEventListener('keydown', closeBurgerKeyboard);
 
-    classUtil();
+  form.addEventListener('submit', () => {
+    return closeBurger();
   });
-});
+}
 
-form.addEventListener('submit', () => {
-  classUtil();
-});
+function closeBurgerKeyboard(e) {
+  if (e.code === 'Escape') {
+    return closeBurger();
+  }
+}
 
-function classUtil() {
+function closeBurger() {
   body.classList.remove('stop-scroll');
   burger.classList.remove('burger-active');
   box.classList.remove('visible');
@@ -45,4 +40,5 @@ function classUtil() {
   themeSwitch.classList.remove('visible');
   logo.classList.add('visible');
   searchForm.classList.add('visible');
+  document.removeEventListener('keydown', closeBurgerKeyboard);
 }

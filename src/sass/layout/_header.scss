@@ -15,11 +15,11 @@
     background: #202025;
   }
 
-  @media (min-width: 768px) and (max-width: 1023px) {
+  @media (min-width: 768px) and (max-width: 1279px) {
     height: 65px;
   }
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1280px) {
     overflow: visible;
     height: 60px;
   }
@@ -54,10 +54,9 @@
       transform: translateX(100%);
       transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
         transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-      // transition: opacity 0.4s, transform 0.4s ease-in-out;
     }
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 1280px) {
       margin-right: auto;
       display: flex;
       align-items: flex-end;
@@ -69,7 +68,7 @@
 }
 
 .visible {
-  @media screen and (max-width: 1023px) {
+  @media screen and (max-width: 1279px) {
     transform: none;
     opacity: 1;
   }

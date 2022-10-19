@@ -1,9 +1,6 @@
-// import { Notify } from 'notiflix/build/notiflix-notify-aio';
-import { gerInfoByName } from './apiData';
-import {
-  sampleCoctaileCard,
-  cocktailsList,
-} from './sampleCoctaileCard';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
+import { gerInfoByName } from './service/apiData';
+import { sampleCoctaileCard, cocktailsList } from './markup/sampleCoctaileCard';
 
 const form = document.querySelector('.search-form');
 const sorry = document.querySelector('[data-sorry]');
@@ -20,6 +17,7 @@ function onSubmit(e) {
     return Notify.failure('You not input query.');
   }
 
+  searchQuery.value = '';
   cocktailsList.innerHTML = '';
 
   gerInfoByName(query)

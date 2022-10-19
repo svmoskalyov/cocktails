@@ -8,7 +8,6 @@
     transform: translateY(-100%);
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
       transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    // transition: opacity 0.4s, transform 0.4s ease-in-out;
   }
 
   @media screen and (min-width: 1024px) {
@@ -22,6 +21,7 @@
     background-color: inherit;
     border: 1px solid #fd5103;
     border-radius: 4px;
+    outline: none;
 
     body.dark-theme & {
       color: #fff;
@@ -39,6 +39,19 @@
 
   &__field {
     position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 100px;
+      width: 20px;
+      height: 1px;
+      opacity: 0.4;
+      border-radius: 2px;
+      background-color: #5f6775;
+      transform: rotate(90deg);
+    }
   }
 
   &__btn {
@@ -49,11 +62,13 @@
     padding: 0;
     width: 40px;
     height: 40px;
-    border: none;
-    border: 1px solid #fd5103;
+    border-right: 1px solid #fd5103;
     border-radius: 4px 0 0 4px;
     background-color: transparent;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   &__icon {

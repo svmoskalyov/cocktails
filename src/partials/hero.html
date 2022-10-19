@@ -1,0 +1,78 @@
+<section class="hero">
+  <div class="container hero__container">
+    <h1 class="hero__title">A party without cocktails is not like a party</h1>
+
+    <picture class="hero__picture">
+      <source
+        srcset="./images/cocktails-des.png 1x, ./images/cocktails-des@2x.png 2x"
+        media="(min-width:1280px)"
+      />
+      <source
+        srcset="./images/cocktails-tab.png 1x, ./images/cocktails-tab@2x.png 2x"
+        media="(min-width:768px)"
+      />
+      <source
+        srcset="./images/cocktails-mob.png 1x, ./images/cocktails-mob@2x.png 2x"
+        media="(min-width:320px)"
+      />
+      <img src="./images/cocktails-mob.png" alt="cocktails" class="hero__img" />
+    </picture>
+
+    <p class="hero__text">Search your favorite cocktail by ABC</p>
+    <ul class="hero__list"></ul>
+    <div class="datalist">
+      <input
+        class="datalist__input"
+        autocomplete="off"
+        role="combobox"
+        list=""
+        id="input"
+        name="letters"
+        value="A"
+      />
+      <svg class="datalist__svg" width="11" height="24">
+        <use href="./images/sprite.svg#vector-i" />
+      </svg>
+      <div class="datalist__content">
+        <datalist id="letters" role="listbox">
+          <option class="datalist__option" value="A">A</option>
+          <option class="datalist__option" value="B">B</option>
+          <option class="datalist__option" value="C">C</option>
+          <option class="datalist__option" value="D">D</option>
+          <option class="datalist__option" value="E">E</option>
+          <option class="datalist__option" value="F">F</option>
+          <option class="datalist__option" value="G">G</option>
+          <option class="datalist__option" value="H">H</option>
+          <option class="datalist__option" value="I">I</option>
+          <option class="datalist__option" value="J">J</option>
+          <option class="datalist__option" value="K">K</option>
+          <option class="datalist__option" value="L">L</option>
+          <option class="datalist__option" value="M">M</option>
+          <option class="datalist__option" value="N">N</option>
+          <option class="datalist__option" value="O">O</option>
+          <option class="datalist__option" value="P">P</option>
+          <option class="datalist__option" value="Q">Q</option>
+          <option class="datalist__option" value="R">R</option>
+          <option class="datalist__option" value="S">S</option>
+          <option class="datalist__option" value="T">T</option>
+          <option class="datalist__option" value="U">U</option>
+          <option class="datalist__option" value="V">V</option>
+          <option class="datalist__option" value="W">W</option>
+          <option class="datalist__option" value="X">X</option>
+          <option class="datalist__option" value="Y">Y</option>
+          <option class="datalist__option" value="Z">Z</option>
+          <option class="datalist__option" value="1">1</option>
+          <option class="datalist__option" value="2">2</option>
+          <option class="datalist__option" value="3">3</option>
+          <option class="datalist__option" value="4">4</option>
+          <option class="datalist__option" value="5">5</option>
+          <option class="datalist__option" value="6">6</option>
+          <option class="datalist__option" value="7">7</option>
+          <option class="datalist__option" value="8">8</option>
+          <option class="datalist__option" value="9">9</option>
+          <option class="datalist__option" value="0">0</option>
+        </datalist>
+      </div>
+    </div>
+  </div>
+</section>
