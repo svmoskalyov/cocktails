@@ -10,15 +10,17 @@
 @import 'base/typography';
 
 @import 'components/burger';
-@import 'components/buttons';
 @import 'components/logo';
 @import 'components/navigation';
 @import 'components/search-form';
 @import 'components/theme-switch';
+@import 'components/modal-coctails';
+@import 'components/modal-ingred';
+
+@import './page/favorite';
+@import './page/favorite-cocktails';
 
 @import 'layout/header';
 @import 'layout/hero';
 @import 'layout/gallery';
-@import 'layout/sorry-card';
-@import 'layout/modal';
 @import 'layout/footer';
