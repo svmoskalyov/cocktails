@@ -44,9 +44,11 @@ $colors: (
   'text-black': #202025,
   'text-gray': #5f6775,
   'text-white': #f5f5f5,
+  'burger-line': #000,
 );
 
 $breakpoints: (
+  'phone': 320px,
   'tablet': 768px,
   'laptop': 1280px,
 );
