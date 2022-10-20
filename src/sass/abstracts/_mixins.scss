@@ -1,35 +1,44 @@
-@mixin breakpoint($breakpoint, $direction) {
-  @if map-has-key($breakpoints, $breakpoint) {
-    $breakpoint-value: map-get($breakpoints, $breakpoint);
+@mixin position(
+  $position: absolute,
+  $top: null,
+  $right: null,
+  $bottom: null,
+  $left: null,
+  $z-index: initial
+) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  z-index: $z-index;
+}
 
-    @if $direction == max {
-      @media (max-width: ($breakpoint-value - 1)) {
-        @content;
-      }
-    } @else if $direction == min {
-      @media (min-width: $breakpoint-value) {
-        @content;
-      }
-    } @else {
-      @media ($direction: $breakpoint-value) {
-        @content;
-      }
-    }
-  } @else {
-    @if $direction == max {
-      @media (max-width: $breakpoint) {
-        @content;
-      }
-    } @else if $direction == min {
-      @media (min-width: $breakpoint) {
-        @content;
-      }
-    } @else {
-      @media ($direction: $breakpoint) {
-        @content;
-      }
-    }
-  }
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin block-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-center-column {
+  @include flex-center;
+  flex-direction: column;
 }
 
 @mixin typography(
@@ -41,6 +50,20 @@
   font-size: $size;
   line-height: $height;
   font-style: normal;
+}
+
+@mixin mq($width, $type: min) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+    @if $type == max {
+      $width: $width - 1px;
+    }
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  } @else {
+    @warn 'Invalid breakpoint: #{$width}.';
+  }
 }
 
 @mixin theme($theme) {
@@ -58,17 +81,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-}
-
-@mixin size($width, $height: $width) {
-  width: $width;
-  height: $height;
-}
-
-@mixin flex($type: flex) {
-  display: $type;
-  align-items: center;
-  justify-content: center;
 }
 
 @mixin transition($props...) {
@@ -104,5 +116,23 @@
   &:focus {
     color: $color-text-hover;
     background-color: $color;
+  }
+}
+
+@mixin placeholder {
+  &.placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+  &::-webkit-input-placeholder {
+    @content;
   }
 }
