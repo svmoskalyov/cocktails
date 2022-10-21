@@ -35,6 +35,7 @@ $text-line-heights: (
   'norm': 1.31,
   'med': 1.19,
   'smal': 1.18,
+  'little': 0.86,
 );
 
 $colors: (
@@ -54,7 +55,7 @@ $breakpoints: (
 );
 
 $z-indexes: (
-  'modal': 5000,
+  'nav': 210,
   'dropdown': 4000,
   'default': 1,
   'below': -1,
