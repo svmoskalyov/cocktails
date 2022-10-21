@@ -2,27 +2,38 @@
   @include mq(tablet) {
     @include mq(laptop, max) {
       body.light-theme & {
-        background: #fff;
+        @include theme(light);
+        // background: #fff;
       }
 
       body.dark-theme & {
-        background: #202025;
+        @include theme(dark);
+        // background: #202025;
       }
 
-      display: flex;
-      justify-content: center;
-      position: fixed;
-      right: 0;
-      top: 55px;
-      z-index: 210;
+      @include flex-center();
+      // display: flex;
+      // justify-content: center;
+      @include position(
+        $position: fixed,
+        $top: 55px,
+        $right: 0,
+        $z-index: fnZ(nav)
+      );
+      // position: fixed;
+      // right: 0;
+      // top: 55px;
+      // z-index: 210;
       overflow-y: auto;
       padding: 33px;
-      width: 100%;
-      height: 100%;
+      @include size(100%);
+      // width: 100%;
+      // height: 100%;
       opacity: 0;
       transform: translateX(100%);
-      transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      @include transition(opacity, transform);
+      // transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      //   transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
   }
 
@@ -63,7 +74,8 @@
 
   &__item,
   &__subitem {
-    position: relative;
+    @include position($position: relative);
+    // position: relative;
     width: 100%;
     cursor: pointer;
   }
@@ -80,14 +92,16 @@
 
   &__item:hover &__sublist,
   &__item:focus-within &__sublist {
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-      transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    @include transition(opacity, transform);
+    // transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    //   transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transform: none;
     opacity: 1;
 
     @include mq(laptop, max) {
-      width: 310px;
-      height: 108px;
+      @include size(310px, 108px);
+      // width: 310px;
+      // height: 108px;
     }
 
     // @media screen and (max-width: 1023px) {
@@ -96,8 +110,9 @@
     // }
 
     @include mq(laptop) {
-      width: 215px;
-      height: 95px;
+      @include size(215px, 95px);
+      // width: 215px;
+      // height: 95px;
     }
 
     // @media screen and (min-width: 1024px) {
@@ -107,13 +122,19 @@
   }
 
   &__link {
-    position: relative;
+    @include position($position: relative);
+    // position: relative;
     display: inline-block;
     width: 100%;
 
-    font-weight: 400;
-    font-size: 28px;
-    line-height: 0.86;
+    @include typography(
+      fnTextWeight(regular),
+      fnTextSize(goodly),
+      fnTextLineHeight(little)
+    );
+    // font-weight: 400;
+    // font-size: 28px;
+    // line-height: 0.86;
 
     // @media screen and (max-width: 1023px) {
     //   width: 310px;
@@ -121,9 +142,10 @@
     // }
 
     @include mq(laptop) {
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 1.33;
+      @include typography();
+      // font-weight: 400;
+      // font-size: 18px;
+      // line-height: 1.33;
     }
 
     // @media screen and (min-width: 1024px) {
@@ -137,25 +159,33 @@
 
   &__link:hover,
   &__link:focus {
-    color: #fd5103;
+    color: fnColor(primary);
+    // color: #fd5103;
   }
 }
 
 .nav__sublist {
   @include mq(laptop, max) {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 1px;
-    height: 1px;
+    @include position($top: 100%, $left: 0);
+    // position: absolute;
+    // top: 100%;
+    // left: 0;
+    @include size(1px);
+    // width: 1px;
+    // height: 1px;
     opacity: 0;
     overflow: hidden;
     border-radius: 4px;
     transform: translateY(-10%);
 
-    font-weight: 400;
-    font-size: 28px;
-    line-height: 0.86;
+    @include typography(
+      fnTextWeight(regular),
+      fnTextSize(goodly),
+      fnTextLineHeight(little)
+    );
+    // font-weight: 400;
+    // font-size: 28px;
+    // line-height: 0.86;
   }
 
   // @media screen and (max-width: 1023px) {
@@ -176,26 +206,31 @@
 
   @include mq(laptop) {
     body.light-theme & {
-      background: #fff;
+      @include theme(light);
+      // background: #fff;
     }
 
     body.dark-theme & {
-      background: #202025;
+      @include theme(dark);
+      // background: #202025;
     }
 
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 1px;
-    height: 1px;
+    @include position($top: 100%, $left: 0);
+    // position: absolute;
+    // top: 100%;
+    // left: 0;
+    @include size(1px);
+    // width: 1px;
+    // height: 1px;
     overflow: hidden;
     border-radius: 4px;
     opacity: 0;
     transform: translateY(-10%);
 
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.33;
+    @include typography();
+    // font-weight: 400;
+    // font-size: 18px;
+    // line-height: 1.33;
   }
 
   // @media screen and (min-width: 1024px) {
@@ -223,16 +258,19 @@
   // }
 
   body.light-theme & {
-    outline: 1px solid #fd5103;
+    outline: 1px solid fnColor(primary);
+    // outline: 1px solid #fd5103;
   }
 
   body.dark-theme & {
-    outline: 1px solid #fff;
+    outline: 1px solid fnColor(bg-body);
+    // outline: 1px solid #fff;
   }
 }
 
 .nav__sublink {
-  position: relative;
+  @include position($position: relative);
+  // position: relative;
   display: inline-block;
   width: 100%;
 
@@ -254,42 +292,53 @@
 
   body.light-theme &:hover,
   body.light-theme &:focus {
-    color: #fff;
-    background-color: #fd5103;
+    color: fnColor(bg-body);
+    background-color: fnColor(primary);
+    // color: #fff;
+    // background-color: #fd5103;
   }
 
   body.dark-theme &:hover,
   body.dark-theme &:focus {
-    color: #000;
-    background-color: #fd5103;
+    color: fnColor(text-black);
+    background-color: fnColor(primary);
+    // color: #000;
+    // background-color: #fd5103;
   }
 }
 
 .nav__link-line {
   // @media screen and (max-width: 1023px) {
   @include mq(laptop, max) {
-    position: absolute;
-    left: 125px;
-    bottom: 45%;
-    width: 13px;
-    height: 2px;
+    @include position($left: 125px, $bottom: 45%);
+    // position: absolute;
+    // left: 125px;
+    // bottom: 45%;
+    @include size(13px, 2px);
+    // width: 13px;
+    // height: 2px;
 
     &::before,
     &::after {
       content: '';
-      position: absolute;
-      left: 20%;
-      width: 100%;
-      height: 2px;
+      @include position($left: 20%);
+      // position: absolute;
+      // left: 20%;
+      @include size(100%, 2px);
+      // width: 100%;
+      // height: 2px;
       border-radius: 1px;
-      background-color: #000;
+      background-color: fnColor(text-black);
+      // background-color: #000;
 
       body.light-theme & {
-        background: #202025;
+        background-color: fnColor(text-black);
+        // background: #202025;
       }
 
       body.dark-theme & {
-        background: #fff;
+        background-color: fnColor(bg-body);
+        // background: #fff;
       }
     }
 
@@ -307,7 +356,8 @@
     .nav__link:hover &::before,
     .nav__link:focus &::after,
     .nav__link:focus &::before {
-      background-color: #fd5103;
+      background-color: fnColor(primary);
+      // background-color: #fd5103;
     }
   }
 }
