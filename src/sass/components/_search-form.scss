@@ -41,7 +41,7 @@
     }
 
     @include placeholder {
-      @include typography(400, 14px, 1.71);
+      @include typography(fnTextWeight(regular), fnTextSize(smal), fnTextLineHeight(larg));
       // font-weight: 400;
       // font-size: 14px;
       // line-height: 1.71;
