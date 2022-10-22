@@ -2,12 +2,14 @@
   @include mq(tablet) {
     @include mq(laptop, max) {
       body.light-theme & {
-        @include theme(light);
+        // @include theme(light);
+         background: fnColor(bg-body);
         // background: #fff;
       }
 
       body.dark-theme & {
-        @include theme(dark);
+        // @include theme(dark);
+         background: fnColor(text-black);
         // background: #202025;
       }
 
@@ -206,12 +208,14 @@
 
   @include mq(laptop) {
     body.light-theme & {
-      @include theme(light);
+      // @include theme(light);
+      background: fnColor(bg-body);
       // background: #fff;
     }
 
     body.dark-theme & {
-      @include theme(dark);
+      // @include theme(dark);
+       background: fnColor(text-black);
       // background: #202025;
     }
 
@@ -332,12 +336,14 @@
       // background-color: #000;
 
       body.light-theme & {
-        background-color: fnColor(text-black);
+        // @include theme(dark);
+        background: fnColor(text-black);
         // background: #202025;
       }
 
       body.dark-theme & {
-        background-color: fnColor(bg-body);
+        // @include theme(light);
+        background: fnColor(bg-body);
         // background: #fff;
       }
     }
