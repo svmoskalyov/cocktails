@@ -56,7 +56,8 @@ $breakpoints: (
 
 $z-indexes: (
   'nav': 210,
-  'dropdown': 4000,
-  'default': 1,
-  'below': -1,
+  'header': 200,
+  'header-box': 100,
+  'theme-marker': 2,
+  'theme-track': 1,
 );
