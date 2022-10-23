@@ -60,9 +60,9 @@
   }
 
   &__control {
-    @include flex-center();
-    // display: flex;
-    // align-items: center;
+    // @include flex-center();
+    display: flex;
+    align-items: center;
     flex-shrink: 0;
     @include position($position: relative);
     // position: relative;
