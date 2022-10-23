@@ -1,3 +1,17 @@
+@mixin mq($width, $type: min) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+    @if $type == max {
+      $width: $width - 1px;
+    }
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  } @else {
+    @warn 'Invalid breakpoint: #{$width}.';
+  }
+}
+
 @mixin position(
   $position: absolute,
   $top: null,
@@ -12,11 +26,6 @@
   bottom: $bottom;
   left: $left;
   z-index: $z-index;
-}
-
-@mixin size($width, $height: $width) {
-  width: $width;
-  height: $height;
 }
 
 @mixin block-center {
@@ -41,6 +50,11 @@
   flex-direction: column;
 }
 
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
 @mixin typography(
   $weight: fnTextWeight(regular),
   $size: fnTextSize(norm),
@@ -50,20 +64,6 @@
   font-size: $size;
   line-height: $height;
   font-style: normal;
-}
-
-@mixin mq($width, $type: min) {
-  @if map_has_key($breakpoints, $width) {
-    $width: map_get($breakpoints, $width);
-    @if $type == max {
-      $width: $width - 1px;
-    }
-    @media only screen and (#{$type}-width: $width) {
-      @content;
-    }
-  } @else {
-    @warn 'Invalid breakpoint: #{$width}.';
-  }
 }
 
 @mixin theme($theme) {
