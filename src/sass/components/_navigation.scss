@@ -2,20 +2,21 @@
   @include mq(tablet) {
     @include mq(laptop, max) {
       body.light-theme & {
-        // @include theme(light);
-         background: fnColor(bg-body);
+        @include theme(light);
+        //  background: fnColor(bg-body);
         // background: #fff;
       }
 
       body.dark-theme & {
-        // @include theme(dark);
-         background: fnColor(text-black);
+        @include theme(dark);
+        //  background: fnColor(text-black);
         // background: #202025;
       }
 
-      @include flex-center();
-      // display: flex;
-      // justify-content: center;
+      // @include flex-center();
+      display: flex;
+      justify-content: center;
+
       @include position(
         $position: fixed,
         $top: 55px,
@@ -138,10 +139,10 @@
     // font-size: 28px;
     // line-height: 0.86;
 
-    // @media screen and (max-width: 1023px) {
-    //   width: 310px;
-    //   padding: 15px 0;
-    // }
+    @include mq(laptop, max) {
+      width: 310px;
+      padding: 15px 0;
+    }
 
     @include mq(laptop) {
       @include typography();
@@ -208,14 +209,14 @@
 
   @include mq(laptop) {
     body.light-theme & {
-      // @include theme(light);
-      background: fnColor(bg-body);
+      @include theme(light);
+      // background: fnColor(bg-body);
       // background: #fff;
     }
 
     body.dark-theme & {
-      // @include theme(dark);
-       background: fnColor(text-black);
+      @include theme(dark);
+      //  background: fnColor(text-black);
       // background: #202025;
     }
 
@@ -336,14 +337,14 @@
       // background-color: #000;
 
       body.light-theme & {
-        // @include theme(dark);
-        background: fnColor(text-black);
+        @include theme(dark);
+        // background: fnColor(text-black);
         // background: #202025;
       }
 
       body.dark-theme & {
-        // @include theme(light);
-        background: fnColor(bg-body);
+        @include theme(light);
+        // background: fnColor(bg-body);
         // background: #fff;
       }
     }
