@@ -24,15 +24,7 @@ body {
     }
   }
 
-  // @media (min-width: 768px) and (max-width: 1279px) {
-  //   padding: 0 33px;
-  // }
-
   @include mq(laptop) {
     padding: 0 15px;
   }
-
-  // @media screen and (min-width: 1280px) {
-  //   padding: 0 15px;
-  // }
 }

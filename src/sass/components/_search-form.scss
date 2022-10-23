@@ -2,65 +2,44 @@
   @include mq(tablet, max) {
     margin-bottom: 25px;
   }
-  // @media screen and (max-width: 767px) {
-  //   margin-bottom: 25px;
-  // }
 
-  // @media screen and (min-width: 768px) and (max-width: 1023px) {
   @include mq(tablet) {
     @include mq(laptop, max) {
       opacity: 0;
       transform: translateY(-100%);
       @include transition(opacity, transform);
-      // transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-      //   transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
   }
 
-  // @media screen and (min-width: 1024px) {
-  //   margin-right: 20px;
-  // }
   @include mq(laptop) {
     margin-right: 20px;
   }
 
   &__input {
     @include size(280px, 40px);
+
     padding: 0 10px 0 50px;
-    // width: 280px;
-    // height: 40px;
+
     background-color: inherit;
     border: 1px solid fnColor(primary);
-    // border: 1px solid #fd5103;
     border-radius: 4px;
     outline: none;
 
     body.dark-theme & {
       color: fnColor(text-white);
-      // color: #fff;
     }
 
     @include placeholder {
-      @include typography(fnTextWeight(regular), fnTextSize(smal), fnTextLineHeight(larg));
-      // font-weight: 400;
-      // font-size: 14px;
-      // line-height: 1.71;
+      @include typography(
+        fnTextWeight(regular),
+        fnTextSize(smal),
+        fnTextLineHeight(larg)
+      );
 
       color: fnColor(text-gray);
-      // color: #5f6775;
       opacity: 0.4;
     }
   }
-
-  // &__input::placeholder {
-  //   font-weight: 400;
-  //   font-size: 14px;
-  //   line-height: 1.71;
-
-  //   color: fnColor(text-gray);
-  //   // color: #5f6775;
-  //   opacity: 0.4;
-  // }
 
   &__field {
     position: relative;
@@ -68,46 +47,30 @@
     &::after {
       content: '';
       @include position($top: 50%, $left: 100px);
-      // position: absolute;
-      // top: 50%;
-      // left: 100px;
       @include size(20px, 1px);
-      // width: 20px;
-      // height: 1px;
+
       opacity: 0.4;
       border-radius: 2px;
       background-color: fnColor(text-gray);
-      // background-color: #5f6775;
       transform: rotate(90deg);
     }
   }
 
   &__btn {
     @include position($top: 0, $left: 0);
-    // position: absolute;
-    // top: 0;
-    // left: 0;
+    @include size(40px);
+
     margin: 0;
     padding: 0;
-    @include size(40px);
-    // width: 40px;
-    // height: 40px;
+
     border-right: 1px solid fnColor(primary);
-    // border-right: 1px solid #fd5103;
     border-radius: 4px 0 0 4px;
     background-color: transparent;
     cursor: pointer;
     @include flex-center();
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
   }
 
   &__icon {
     @include photo('../images/search.svg');
-    // background-image: url('../images/search.svg');
-    // background-position: center;
-    // background-repeat: no-repeat;
-    // background-size: cover;
   }
 }

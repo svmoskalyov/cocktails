@@ -13,9 +13,7 @@
 .hero__container {
   @include mq(tablet, max) {
     @include flex-center();
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
+
     flex-wrap: wrap;
     flex-direction: column;
   }
@@ -23,11 +21,12 @@
 
 .hero__title {
   @include position($position: relative);
-  @include typography(fnTextWeight(semibold), fnTextSize(babig), fnTextLineHeight(larg));
-  // position: relative;
-  // font-weight: 600;
-  // font-size: 22px;
-  // line-height: 1.9;
+  @include typography(
+    fnTextWeight(semibold),
+    fnTextSize(babig),
+    fnTextLineHeight(larg)
+  );
+
   width: 300px;
   margin-bottom: 28px;
   color: fnColor(secondory);
@@ -50,34 +49,29 @@
 .hero__picture {
   @include position($position: relative);
   margin: 0;
-  // position: relative;
 }
 
 .hero__img {
   min-width: 300px;
 
   @include mq(tablet) {
-      @include position($top: -175px, $left: 378px);
-      min-width: 336px;
-    // position: absolute;
-    // top: -175px;
-    // left: 378px;
+    @include position($top: -175px, $left: 378px);
+    min-width: 336px;
   }
 
   @include mq(laptop) {
     @include position($top: -270px, $left: 750px);
     min-width: 501px;
-    // top: -270px;
-    // left: 750px;
   }
 }
 
 .hero__text {
-  @include typography(fnTextWeight(medium), fnTextSize(smal), fnTextLineHeight(extrabig));
-  // font-weight: 500;
-  // font-size: 14px;
-  // line-height: 2;
-  // letter-spacing: 0.02em;
+  @include typography(
+    fnTextWeight(medium),
+    fnTextSize(smal),
+    fnTextLineHeight(extrabig)
+  );
+
   margin-top: 28px;
   margin-bottom: 20px;
   opacity: 0.8;
@@ -105,16 +99,13 @@
 
   @include mq(tablet) {
     @include flex-center();
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
 
     flex-wrap: wrap;
     width: 325px;
   }
 
   @include mq(laptop) {
-    width: 520px;
+    width: 550px;
   }
 }
 
@@ -126,21 +117,19 @@
 
 .hero__btn {
   @include flex-center();
-  @include typography(fnTextWeight(bolt), fnTextSize(smal), fnTextLineHeight(big));
+  @include typography(
+    fnTextWeight(bolt),
+    fnTextSize(smal),
+    fnTextLineHeight(big)
+  );
   border: 0;
   margin: 0;
   background-color: transparent;
   padding: 0;
   width: 24px;
-  // font-weight: 700;
-  // font-size: 14px;
-  // line-height: 1.5;
-  color: fnColor(text-gray);
-   text-align: center;
 
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
+  color: fnColor(text-gray);
+  text-align: center;
 
   &:hover,
   &:focus {
@@ -149,9 +138,7 @@
 
   @media screen and(min-width: 768px) {
     transform: scale(1);
-        @include transition(text-shadow, transform);
-    // transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    // text-shadow: 0px 7px 4px rgba(0, 0, 0, 0.25);
+    @include transition(text-shadow, transform);
 
     &:hover,
     &:focus {
@@ -170,8 +157,6 @@
     width: 40px;
     transform: scale(1);
     @include transition(text-shadow, transform);
-    // transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    // text-shadow: 0px 7px 4px rgba(0, 0, 0, 0.25);
 
     &:hover,
     &:focus {
@@ -194,10 +179,12 @@
   }
 
   @include flex-center();
-  @include typography(fnTextWeight(bolt), fnTextSize(med), fnTextLineHeight(babig));
-  // font-weight: 700;
-  // font-size: 16px;
-  // line-height: 135%;
+  @include typography(
+    fnTextWeight(bolt),
+    fnTextSize(med),
+    fnTextLineHeight(babig)
+  );
+
   padding: 6px 10px;
   height: 34px;
   width: 93px;
@@ -206,15 +193,11 @@
   outline: none;
   border-radius: 4px;
   margin: 0 auto;
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
 }
 
 datalist {
   @include size(93px, 84px);
-  // width: 93px;
-  // height: 84px;
+
   border: 1px solid fnColor(secondory);
   border-radius: 4px;
   overflow-y: scroll;
@@ -223,16 +206,15 @@ datalist {
 
 .datalist__content {
   @include flex-center();
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
 }
 
 option {
-  @include typography(fnTextWeight(bolt), fnTextSize(smal), fnTextLineHeight(big));
-  // font-weight: 700;
-  // font-size: 10px;
-  // line-height: 1.5;
+  @include typography(
+    fnTextWeight(bolt),
+    fnTextSize(smal),
+    fnTextLineHeight(big)
+  );
+
   color: fnColor(text-gray);
 
   &:not(:last-child) {
@@ -244,15 +226,10 @@ option {
   @include position($top: 5px, $left: 73%);
   fill: fnColor(secondory);
   transform: rotate(90deg);
-
-  // position: absolute;
-  // top: 5px;
-  // left: 73%;
 }
 
 .datalist {
   @include position($position: relative);
-  // position: relative;
 
   @include mq(tablet) {
     display: none;

@@ -8,15 +8,9 @@
     fnTextSize(babig),
     fnTextLineHeight(great)
   );
+
   text-align: center;
-
-  // font-style: normal;
-  // font-weight: 600;
-  // font-size: 22px;
-  // line-height: 1.62;
-
   color: inherit;
-
   margin-top: 30px;
   padding: 0;
   margin-bottom: 0;
@@ -27,9 +21,6 @@
       fnTextSize(great),
       fnTextLineHeight(med)
     );
-    // font-weight: 700;
-    // font-size: 32px;
-    // line-height: 1.19;
   }
 
   @include mq(laptop) {
@@ -38,8 +29,6 @@
       fnTextSize(larg),
       fnTextLineHeight(smal)
     );
-    // font-size: 48px;
-    // line-height: 1.15;
 
     margin-top: 96px;
   }
@@ -50,11 +39,7 @@
   margin-top: 60px;
   min-width: 100%;
   padding-bottom: 60px;
-
-  // display: flex;
   flex-wrap: wrap;
-  // align-items: center;
-  // justify-content: center;
   gap: 20px;
 
   @include mq(tablet) {
@@ -72,27 +57,20 @@
 
 .f-ing_items {
   @include size(280px, 177px);
-  // width: 280px;
-  // height: 177px;
-  border: 1px solid fnColor(primary);
-  // border: 1px solid #fd5103;
-  border-radius: 4px;
 
+  border: 1px solid fnColor(primary);
+  border-radius: 4px;
   padding: 20px;
   margin: 0;
 
   @include mq(tablet) {
     @include size(336px, 205px);
     padding: 20px 35px 28px 20px;
-
-    // width: 336px;
-    // height: 205px;
   }
 
   @include mq(laptop) {
     @include size(394px, 221px);
-    // width: 394px;
-    // height: 221px;
+
     padding: 30px 28px;
   }
 }
@@ -101,24 +79,21 @@
   display: flex;
   justify-content: space-between;
 }
+
 .f-ing-indicator {
   align-self: center;
   color: fnColor(primary);
 }
+
 .f-ing_subtitle {
   @include typography(
     fnTextWeight(blak),
     fnTextSize(big),
     fnTextLineHeight(babig)
   );
+
   font-family: fnTextFont(secondory);
-  // font-style: normal;
-  // font-weight: 900;
-  // font-size: 26px;
-  // line-height: 1.32;
-
   color: inherit;
-
   padding-bottom: 20px;
   margin: 0;
   padding-top: 0;
@@ -140,13 +115,9 @@
     fnTextSize(smal),
     fnTextLineHeight(big)
   );
-  // font-weight: 600;
-  // font-size: 14px;
-  // line-height: 1.5;
 
   text-transform: uppercase;
   color: fnColor(text-gray);
-
   padding-bottom: 20px;
   margin: 0;
   padding-top: 0;
@@ -159,13 +130,10 @@
 
 .f-ing_btn {
   @include flex-center();
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
+
   list-style: none;
   margin: 0;
   gap: 20px;
-
   padding: 0;
   line-height: 0;
 
@@ -184,26 +152,17 @@
     fnTextSize(smal),
     fnTextLineHeight(great)
   );
+
   padding: 0;
   margin: 0;
   @include size(108px, 39px);
-  // width: 108px;
-  // height: 39px;
+
   border: none;
   background: fnColor(primary);
   border-radius: 4px;
-
   transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
-
   font-family: fnTextFont(secondory);
-
-  // font-family: 'Roboto';
-  // font-style: normal;
-  // font-weight: 400;
-  // font-size: 14px;
-  // line-height: 1.71;
   text-align: center;
-  // letter-spacing: 0.02em;
 
   &:hover,
   &:focus {
@@ -245,9 +204,6 @@
   border-radius: 4px;
 
   @include flex-center();
-  // align-items: center;
-  // justify-content: center;
-  // display: flex;
 
   transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 
@@ -263,12 +219,8 @@
     fnTextSize(smal),
     fnTextLineHeight(great)
   );
+
   font-family: fnTextFont(secondory);
-  // font-family: 'Roboto';
-  // font-style: normal;
-  // font-weight: 400;
-  // font-size: 14px;
-  // line-height: 1.71;
   letter-spacing: 0.02em;
   color: fnColor(primary);
   gap: 5px;
@@ -276,7 +228,6 @@
   @include mq(tablet) {
     width: 123px;
     height: 48px;
-
     font-size: 20px;
     line-height: 1.2;
     background-position: 88px 13px;

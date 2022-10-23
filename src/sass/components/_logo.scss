@@ -3,43 +3,26 @@
   min-width: 156px;
   min-height: 43px;
 
-  // background-image: url('../images/logo.png');
-  // background-position: center;
-  // background-repeat: no-repeat;
-  // background-size: cover;
-
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     @include photo('../images/logo@2x.png');
-
-    // background-image: url('../images/logo@2x.png');
   }
 
-  // @media screen and (max-width: 767px) {
   @include mq(tablet, max) {
     @include transition(opacity, transform);
     min-width: 125px;
     min-height: 35px;
     opacity: 0;
     transform: translateY(-100%);
-
-    // transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    //   transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  // @media (min-width: 768px) and (max-width: 1023px) {
-  //   margin-right: 190px;
-  // }
   @include mq(tablet) {
     @include mq(laptop, max) {
       margin-right: 190px;
     }
   }
 
-  // @media screen and (min-width: 1024px) {
-  //   margin-right: 43px;
-  // }
   @include mq(laptop) {
     margin-right: 43px;
   }
