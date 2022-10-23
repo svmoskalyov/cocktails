@@ -3,12 +3,13 @@
 }
 
 .f-ing_title {
+  @include typography(fnTextWeight(semibold), fnTextSize(babig), fnTextLineHeight(great));
   text-align: center;
 
-  font-style: normal;
-  font-weight: 600;
-  font-size: 22px;
-  line-height: 1.62;
+  // font-style: normal;
+  // font-weight: 600;
+  // font-size: 22px;
+  // line-height: 1.62;
 
   color: inherit;
 
@@ -16,32 +17,35 @@
   padding: 0;
   margin-bottom: 0;
 
-  @media screen and (min-width: 768px) {
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 1.19;
+  @include mq(tablet) {
+    @include typography(fnTextWeight(bolt), fnTextSize(great), fnTextLineHeight(med));
+    // font-weight: 700;
+    // font-size: 32px;
+    // line-height: 1.19;
   }
 
-  @media screen and (min-width: 1280px) {
-    font-size: 48px;
-    line-height: 1.15;
+  @include mq(laptop) {
+    @include typography(fnTextWeight(semibold), fnTextSize(larg), fnTextLineHeight(smal));
+    // font-size: 48px;
+    // line-height: 1.15;
 
     margin-top: 96px;
   }
 }
 
 .f-ing_blocks {
+  @include flex-center();
   margin-top: 60px;
   min-width: 100%;
   padding-bottom: 60px;
 
-  display: flex;
+  // display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+  // align-items: center;
+  // justify-content: center;
   gap: 20px;
 
-  @media screen and (min-width: 768px) {
+  @include mq(tablet) {
     margin-top: 78px;
     gap: 32px;
     align-items: unset;
@@ -49,30 +53,34 @@
     padding-bottom: 140px;
   }
 
-  @media screen and (min-width: 1280px) {
+  @include mq(laptop) {
     margin-top: 40px;
   }
 }
 
 .f-ing_items {
-  width: 280px;
-  height: 177px;
-  border: 1px solid #fd5103;
+   @include size(280px, 177px);
+  // width: 280px;
+  // height: 177px;
+  border: 1px solid fnColor(primary);
+  // border: 1px solid #fd5103;
   border-radius: 4px;
 
   padding: 20px;
   margin: 0;
 
-  @media screen and (min-width: 768px) {
+  @include mq(tablet) {
+    @include size(336px, 205px);
     padding: 20px 35px 28px 20px;
 
-    width: 336px;
-    height: 205px;
+    // width: 336px;
+    // height: 205px;
   }
 
-  @media screen and (min-width: 1280px) {
-    width: 394px;
-    height: 221px;
+  @include mq(laptop) {
+    @include size(394px, 221px);
+    // width: 394px;
+    // height: 221px;
     padding: 30px 28px;
   }
 }
@@ -83,14 +91,15 @@
 }
 .f-ing-indicator {
   align-self: center;
-  color: #fd5103;
+  color: fnColor(primary);
 }
 .f-ing_subtitle {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 900;
-  font-size: 26px;
-  line-height: 1.32;
+  @include typography(fnTextWeight(blak), fnTextSize(big), fnTextLineHeight(babig));
+  font-family: fnTextFont(secondory);
+  // font-style: normal;
+  // font-weight: 900;
+  // font-size: 26px;
+  // line-height: 1.32;
 
   color: inherit;
 
@@ -98,39 +107,41 @@
   margin: 0;
   padding-top: 0;
 
-  @media screen and (min-width: 768px) {
+  @include mq(tablet) {
     font-size: 28px;
     line-height: 1.18;
   }
 
-  @media screen and (min-width: 1280px) {
+  @include mq(laptop) {
     font-size: 32px;
     line-height: 1.19;
   }
 }
 
 .f-ing_text {
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 1.5;
+    @include typography(fnTextWeight(semibold), fnTextSize(smal), fnTextLineHeight(big));
+  // font-weight: 600;
+  // font-size: 14px;
+  // line-height: 1.5;
 
   text-transform: uppercase;
-  color: #5f6775;
+  color: fnColor(text-gray);
 
   padding-bottom: 20px;
   margin: 0;
   padding-top: 0;
 
-  @media screen and (min-width: 768px) {
+  @include mq(tablet) {
     font-size: 16px;
     line-height: 1.45;
   }
 }
 
 .f-ing_btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex-center();
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
   list-style: none;
   margin: 0;
   gap: 20px;
@@ -138,44 +149,48 @@
   padding: 0;
   line-height: 0;
 
-  @media screen and (min-width: 768px) {
+  @include mq(tablet) {
     gap: 12px;
   }
 
-  @media screen and (min-width: 1280px) {
+  @include mq(laptop) {
     gap: 16px;
   }
 }
 
 .f-ing_btn-add {
+  @include typography(fnTextWeight(regular), fnTextSize(smal), fnTextLineHeight(great));
   padding: 0;
   margin: 0;
-  width: 108px;
-  height: 39px;
+  @include size(108px, 39px);
+  // width: 108px;
+  // height: 39px;
   border: none;
-  background: #fd5103;
+  background: fnColor(primary);
   border-radius: 4px;
 
   transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  font-family: fnTextFont(secondory);
+  
+  // font-family: 'Roboto';
+  // font-style: normal;
+  // font-weight: 400;
+  // font-size: 14px;
+  // line-height: 1.71;
   text-align: center;
-  letter-spacing: 0.02em;
+  // letter-spacing: 0.02em;
 
   &:hover,
   &:focus {
-    background-color: #ffffff;
-    color: #fd5103;
-    border: 1px solid #fd5103;
+    background-color: fnColor(text-white);
+    color: fnColor(primary);
+    border: 1px solid  fnColor(primary);
   }
 
-  color: #ffffff;
+  color: fnColor(text-white);
 
-  @media screen and (min-width: 768px) {
+  @include mq(tablet) {
     width: 160px;
     height: 48px;
 
@@ -183,12 +198,13 @@
     line-height: 1.2;
   }
 
-  @media screen and (min-width: 1280px) {
+  @include mq(laptop) {
     width: 182px;
   }
 }
 
 .f-ing_btn-rem {
+ 
   padding: 0;
   margin: 0;
   display: block;
@@ -202,32 +218,35 @@
   background-repeat: no-repeat;
   background-position: 74px 10px;
   background-size: 18px 16px;
-  border: 1px solid #fd5103;
+  border: 1px solid fnColor(primary);
   border-radius: 4px;
 
-  align-items: center;
-  justify-content: center;
-  display: flex;
+   @include flex-center();
+  // align-items: center;
+  // justify-content: center;
+  // display: flex;
 
   transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 
   &:hover,
   &:focus {
     background-image: url('../images/heart2.png');
-    background-color: #fd520317;
+    background-color: fnColor(text-black);
     outline: none;
   }
 
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  @include typography(fnTextWeight(regular), fnTextSize(smal), fnTextLineHeight(great));
+  font-family: fnTextFont(secondory);
+  // font-family: 'Roboto';
+  // font-style: normal;
+  // font-weight: 400;
+  // font-size: 14px;
+  // line-height: 1.71;
   letter-spacing: 0.02em;
-  color: #fd5103;
+  color: fnColor(primary);
   gap: 5px;
 
-  @media screen and (min-width: 768px) {
+  @include mq(tablet) {
     width: 123px;
     height: 48px;
 
@@ -239,7 +258,7 @@
     line-height: 1.2;
   }
 
-  @media screen and (min-width: 1280px) {
+  @include mq(laptop) {
     width: 141px;
     background-position: 100px 14px;
   }
