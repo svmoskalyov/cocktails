@@ -54,14 +54,14 @@
 
   &__box {
     body.light-theme & {
-      //  @include theme(light);
-      background: fnColor(bg-body);
+       @include theme(light);
+      // background: fnColor(bg-body);
       // background: #fff;
     }
 
     body.dark-theme & {
-      //  @include theme(light);
-      background: fnColor(bg-body);
+       @include theme(dark);
+      // background: fnColor(text-black);
       // background: #202025;
     }
 
@@ -110,6 +110,7 @@
   }
 }
 
-.stop-scroll {
+.stop-scroll,
+.disable-scroll {
   overflow: hidden;
 }
