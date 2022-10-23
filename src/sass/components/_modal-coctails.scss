@@ -22,7 +22,7 @@
   border-radius: 4px;
   margin-bottom: 22px;
 
-  @media (min-width: 768px) {
+  @include mq(tablet) {
     margin-top: -40px;
     margin-left: -20px;
     margin-right: 32px;
@@ -77,14 +77,14 @@
   &.cocktail__name--big {
     display: none;
 
-    @media (min-width: 768px) {
+    @include mq(tablet) {
       display: block;
       margin-bottom: 28px;
     }
   }
 
   &.cocktail__name--mobile {
-    @media (min-width: 768px) {
+    @include mq(tablet) {
       display: none;
     }
   }
@@ -101,7 +101,7 @@
   letter-spacing: 0.03em;
   color: #202025;
 
-  @media (min-width: 768px) {
+  @include mq(tablet) {
     margin-bottom: 24px;
   }
 }
@@ -164,7 +164,7 @@
   transition-property: #fd5103;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  @media (min-width: 768px) {
+  @include mq(tablet) {
     margin-top: 40px;
   }
 }
@@ -180,7 +180,7 @@
 }
 
 .cocktail__modal-btn {
-  @media (min-width: 768px) {
+  @include mq(tablet) {
     margin-bottom: 28px;
     margin-right: 28px;
     display: flex;
@@ -189,21 +189,21 @@
 }
 
 .instraction__wrap {
-  @media (min-width: 768px) {
+  @include mq(tablet) {
     margin-left: 28px;
     order: 3;
   }
 }
 
 .modal__form {
-  @media (min-width: 768px) {
+  @include mq(tablet) {
     display: flex;
     flex-wrap: wrap;
   }
 }
 
 .ingredients__wraper {
-  @media (min-width: 768px) {
+  @include mq(tablet) {
     display: flex;
     order: 2;
   }
@@ -255,7 +255,7 @@
   padding-left: 20px;
   padding-right: 20px;
 
-  @media screen and (min-width: 768px) {
+  @include mq(tablet) {
     width: 720px;
     height: 90vh;
     padding-right: 32px;
