@@ -3,7 +3,11 @@
 }
 
 .f-ing_title {
-  @include typography(fnTextWeight(semibold), fnTextSize(babig), fnTextLineHeight(great));
+  @include typography(
+    fnTextWeight(semibold),
+    fnTextSize(babig),
+    fnTextLineHeight(great)
+  );
   text-align: center;
 
   // font-style: normal;
@@ -18,14 +22,22 @@
   margin-bottom: 0;
 
   @include mq(tablet) {
-    @include typography(fnTextWeight(bolt), fnTextSize(great), fnTextLineHeight(med));
+    @include typography(
+      fnTextWeight(bolt),
+      fnTextSize(great),
+      fnTextLineHeight(med)
+    );
     // font-weight: 700;
     // font-size: 32px;
     // line-height: 1.19;
   }
 
   @include mq(laptop) {
-    @include typography(fnTextWeight(semibold), fnTextSize(larg), fnTextLineHeight(smal));
+    @include typography(
+      fnTextWeight(semibold),
+      fnTextSize(larg),
+      fnTextLineHeight(smal)
+    );
     // font-size: 48px;
     // line-height: 1.15;
 
@@ -59,7 +71,7 @@
 }
 
 .f-ing_items {
-   @include size(280px, 177px);
+  @include size(280px, 177px);
   // width: 280px;
   // height: 177px;
   border: 1px solid fnColor(primary);
@@ -94,7 +106,11 @@
   color: fnColor(primary);
 }
 .f-ing_subtitle {
-  @include typography(fnTextWeight(blak), fnTextSize(big), fnTextLineHeight(babig));
+  @include typography(
+    fnTextWeight(blak),
+    fnTextSize(big),
+    fnTextLineHeight(babig)
+  );
   font-family: fnTextFont(secondory);
   // font-style: normal;
   // font-weight: 900;
@@ -119,7 +135,11 @@
 }
 
 .f-ing_text {
-    @include typography(fnTextWeight(semibold), fnTextSize(smal), fnTextLineHeight(big));
+  @include typography(
+    fnTextWeight(semibold),
+    fnTextSize(smal),
+    fnTextLineHeight(big)
+  );
   // font-weight: 600;
   // font-size: 14px;
   // line-height: 1.5;
@@ -159,7 +179,11 @@
 }
 
 .f-ing_btn-add {
-  @include typography(fnTextWeight(regular), fnTextSize(smal), fnTextLineHeight(great));
+  @include typography(
+    fnTextWeight(regular),
+    fnTextSize(smal),
+    fnTextLineHeight(great)
+  );
   padding: 0;
   margin: 0;
   @include size(108px, 39px);
@@ -172,7 +196,7 @@
   transition: cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 
   font-family: fnTextFont(secondory);
-  
+
   // font-family: 'Roboto';
   // font-style: normal;
   // font-weight: 400;
@@ -185,7 +209,7 @@
   &:focus {
     background-color: fnColor(text-white);
     color: fnColor(primary);
-    border: 1px solid  fnColor(primary);
+    border: 1px solid fnColor(primary);
   }
 
   color: fnColor(text-white);
@@ -204,7 +228,6 @@
 }
 
 .f-ing_btn-rem {
- 
   padding: 0;
   margin: 0;
   display: block;
@@ -221,7 +244,7 @@
   border: 1px solid fnColor(primary);
   border-radius: 4px;
 
-   @include flex-center();
+  @include flex-center();
   // align-items: center;
   // justify-content: center;
   // display: flex;
@@ -235,7 +258,11 @@
     outline: none;
   }
 
-  @include typography(fnTextWeight(regular), fnTextSize(smal), fnTextLineHeight(great));
+  @include typography(
+    fnTextWeight(regular),
+    fnTextSize(smal),
+    fnTextLineHeight(great)
+  );
   font-family: fnTextFont(secondory);
   // font-family: 'Roboto';
   // font-style: normal;
