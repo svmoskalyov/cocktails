@@ -69,10 +69,10 @@
 @mixin theme($theme) {
   @if $theme == light {
     color: fnColor(text-black);
-    background-color: fnColor(bg-body);
+    background: fnColor(bg-body);
   } @else if $theme == dark {
     color: fnColor(bg-body);
-    background-color: fnColor(text-black);
+    background: fnColor(text-black);
   }
 }
 
