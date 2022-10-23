@@ -18,11 +18,21 @@ body {
   max-width: 1280px;
   width: 100%;
 
-  @media (min-width: 768px) and (max-width: 1279px) {
-    padding: 0 33px;
+  @include mq(tablet) {
+    @include mq(laptop, max) {
+      padding: 0 33px;
+    }
   }
 
-  @media screen and (min-width: 1280px) {
+  // @media (min-width: 768px) and (max-width: 1279px) {
+  //   padding: 0 33px;
+  // }
+
+  @include mq(laptop) {
     padding: 0 15px;
   }
+
+  // @media screen and (min-width: 1280px) {
+  //   padding: 0 15px;
+  // }
 }
